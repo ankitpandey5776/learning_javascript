@@ -1,0 +1,25 @@
+<!-- 1 we have to fetch the element from  text box
+      2. add that fetched element...(for this we need to create a new div 
+      dynamically every time the add button is clicked) -->
+
+      <html>
+        <body>
+            <input type="text" ></input>
+            <button onclick="addTodo()">Add Todo!</button>
+        </body>
+        <script>
+            
+            function deleteTodo(index) {
+                const element = document.getElementById("todo-" + index);
+                element.parentNode.removeChild(element);
+            }
+            function addTodo(){
+                const inputE  = document.querySelector("input");
+                const value=inputE.value;
+    
+                const newDivE1 = document.createElement("div");
+                newDivE1.innerHTML="<div>"+"*"+value ;
+                document.querySelector("body").appendChild(newDivE1);
+            }
+        </script>
+    </html>
