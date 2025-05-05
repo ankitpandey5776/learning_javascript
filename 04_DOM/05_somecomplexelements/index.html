@@ -1,0 +1,24 @@
+<html>
+    <body>
+        <h2>Todo App</h2>
+        <input type="text">
+        <button onclick="AddTodo()">add to list</button>
+    </body>
+</html>
+<script>
+    let ctr=1;
+    function deleteTodo(index){
+         const element = document.getElementById("todo-"+index)   // better indexx
+        // const element = document.getElementById(index)  
+        element.parentNode.removeChild(element)
+    }
+    function AddTodo(){
+        const newE1 = document.querySelector("input").value
+        const newdiv  =document.createElement("div")
+         newdiv.setAttribute("id","todo-"+ ctr);   //better syntax
+        // newdiv.setAttribute("id", ctr);
+        newdiv.innerHTML = "<div>"+ newE1+"</div><button onclick='deleteTodo("+ctr+")'>delete</button";
+        document.querySelector("body").appendChild(newdiv)
+        ctr=ctr+1;
+    }
+</script>
