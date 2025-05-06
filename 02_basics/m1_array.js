@@ -12,7 +12,7 @@ const myarr = new Array(0,1,2,3,4,5)
 myarr.unshift(9); //* 9 is inserted at 0th index  ( pushing at oth index )
 myarr.shift(); //*pop 0th element
 
-
+console.log(myArray[3]);
 
 // console.log(myarr);
 
